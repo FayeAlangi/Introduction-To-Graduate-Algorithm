@@ -74,14 +74,14 @@ def maxSubArray(nums):
 ### Python Implementation (Dynamic Programming)
 
 ```agsl
-    def maxSubArray(self, nums: List[int]) -> int:
-        max_sum=-float('inf')
-        curr_sum=0
-        for i in range(len(nums)):
-            curr_sum+=nums[i]
-            if  max_sum < curr_sum:
-                max_sum=curr_sum
-            if curr_sum < 0:
+def maxSubArray(self, nums: List[int]) -> int:
+    max_sum=-float('inf')
+    curr_sum=0
+    for i in range(len(nums)):
+        curr_sum+=nums[i]
+        if  max_sum < curr_sum:
+               max_sum=curr_sum
+        if curr_sum < 0:
                 curr_sum=0
-        return max_sum
+    return max_sum
 ```
